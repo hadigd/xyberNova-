@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wellcome to xyberNova store</title>
+  <link rel="icon" type="image/png" href="logo.png">
+
+<style type="text/css" media="all">
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  min-height: 100vh; /* Allow scrolling */
+}
+
+
+.logo img{
+  margin-bottom: 40px;
+  width: 80vw;
+  height: 40vh;
+  animation: popup 3s 1;
+}
+
+.Wellcometext img{
+  margin-bottom: 50px;
+  width: 100vw;
+  height: 50vh;
+  animation: popup 3s 1;
+}
+
+
+
+
+@keyframes popup{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+</style>
+
+</head>
+<body>
+  <div class="logo">
+    <img src="logom.png" alt="logo" />
+  </div>
+<div class="Wellcometext">
+  <img src="welltextbg.png" alt="Wellcome to xyberNova" />
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  setTimeout(function(){
+    window.location.href="main.html";
+    },3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+ @import url('https://fonts.googleapis.com/css2?family=Anton&family=Berkshire+Swash&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gidole&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+ 
+ 
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  min-height: 100vh; /* Allow scrolling */
+}
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 1px;
+  border-radius: 20px;
+  background: linear-gradient(#ff00ff45 ,#00ffff40); /* Adjust colors */
+    backdrop-filter: blur(10px);
+  
+}
+nav:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translatey(5px);
+  box-shadow: 0px 15px 15px#00ffffcc;
+  border-radius: 20px;
+  background: linear-gradient(#ff00ff45 ,#00ffff40); /* Adjust colors */
+    backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+#cart{
+  margin-left: 13vw;
+  background-color: #ffffff00;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+}
+#nav-link{
+  margin-right: 13vw;
+  background-color: #ffffff00;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: #Fff;
+}
+
+#menu {
+        display: none;
+        background: #00ffffcc;
+        box-shadow: 5px 5px 5px#00a9f2cc;
+        color: black;
+        padding: 10px;
+        width: 150px;
+        position: absolute;
+        top: 50px;
+        left: 5px;
+        border-radius: 5px;
+    }
+.menu-item{
+  margin: 5px;
+}
+#menu a{
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 100px;
+  padding: 2px;
+  border-radius: 05px;
+}
+    /* Show menu when active */
+.show {
+        display: block !important;
+    }
+    
+    
+#searchbox{
+  text-align: center;
+  height: 30px;
+  width: 55vw;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#searchbox::placeholder{
+  color: #000;
+  padding: 5px;
+  text-align: center;
+}
+#nav-link-tag{
+  display: none;
+}
+/* big screem searchbox2...........*/
+#searchbox2{
+  display: none;
+  height: 30px;
+  width: 25vw;
+  padding: 20px;
+  order: 2;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* btn ......hide btn in other view..*/
+#searchbtn{
+  display: none;
+ margin-right: 13vw;
+  background-color: #ffffff00;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+
+main img{
+  width: 100vw;
+  height: 30vh;
+  box-shadow: 0px 15px 15px#00ffffcc;
+}
+main img:hover{
+  width: 100vw;
+  height: 30vh;
+  box-shadow: 0px 15px 15px#007affcc;
+  cursor: url(cursor.cur);
+}
+
+
+
+/* Large Screens (Above 1440px, like desktops) */
+@media (min-width: 1440px) {
+ 
+ nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  padding: 3px;
+  background-color: #999;
+  border-radius: 40px;
+  
+}
+#cart{
+  margin-left: 13vw;
+  font-size: 30px;
+  display: none;
+}
+#nav-link{
+  margin-right: 13vw;
+  font-size: 30px;
+  display: none;
+}
+#searchbox{
+  height: 50px;
+  width: 30vw;
+  border-radius: 20px;
+  outline: none;
+  display: none;
+  order: 2;
+}
+#nav-link-tag{
+  margin: 1px;
+  margin-left: 10vw;
+  order: 3;
+  gap: 10px;
+  text-decoration: none;
+  display: block;
+}
+#nav-link-tag li{
+  display: inline;
+  align-items: center;
+  margin: 5px;
+  text-decoration: none;
+}
+#nav-link-tag a{
+  display: inline;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 20px;
+  background: linear-gradient(#00ffffcc,#00cff28d);
+  font-family: serif;
+  font-size: 25px;
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#searchbtn{
+   display: block;
+   font-size: 50px;
+   order: 1;
+ }
+
+  main img{
+  height: 70vh;
+}
+  main img:hover{
+  height: 70vh;
+  cursor: url(cursor.cur);
+}
+}
+
+/* Laptop Screens (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    main img{
+  height: 50vh;
+}
+  main img:hover{
+  height: 50vh;
+  cursor: url(cursor.cur);
+}
+}
+
+
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+      main img{
+  height: 50vh;
+}
+  main img:hover{
+  height: 50vh;
+  cursor: url(cursor.cur);
+}
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 767px) {
+      main img{
+  height: 50vh;
+}
+  main img:hover{
+  height: 50vh;
+  cursor: url(cursor.cur);
+}
+}
+
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  
+}
+  

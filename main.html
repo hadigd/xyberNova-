@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>xyberNova store</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+  <nav>
+    <!--..... more devices view .....-->
+    <button id="nav-link">≡</button>
+    <input type="text" name="searchbox" id="searchbox" placeholder="🔍Search..." />
+<button id="cart" onclick="window.location.href='cart.html'">🛒</button>
+
+    
+    
+    
+    <!-- tab & Laptop or bigscreen view-->
+  <button id="searchbtn" onclick="showseaechbox()">⌕</button>
+    <input type="text" name="searchbox" id="searchbox2" placeholder="🔍Search..." />
+     <ul id="nav-link-tag">
+        <li class="home"><a href="main.html">Home</a></li>
+        
+        <li class="about-us"><a href="about.html">About-Us</a></li>
+        
+        <li class="contect"><a href="contect.html">Contect</a></li>
+
+    </ul>
+<!-- .............................-->
+  </nav>
+  <!-- menu links.................. -->
+  <div id="menu">
+    <div class="menu-item"><a href="main.html">Home</a></div>
+     <div class="menu-item"><a href="contect.html">Contect</a></div>
+     <div class="menu-item"><a href="about.html">About-Us</a></div>
+ </div>
+  <!--.............................. -->
+  
+  <main>
+    <img src="xyberNova.png" alt="welcom xyberNova store" />
+    
+    <!-- <ul id="productList">
+        <li class="product">Laptop</li>
+        <li class="product">Smartphone</li>
+        <li class="product">Headphones</li>
+        <li class="product">Smartwatch</li>
+        <li class="product">Camera</li>
+       <li class="product">v</li>
+
+    </ul>  -->
+    <div class="product">
+      <div class="product-img">
+        <img src="product.png" alt="product">
+      </div>
+    </div>
+  </main>
+  
+<script type="text/javascript" charset="utf-8">
+// menuButton .......................
+    const menuButton = document.getElementById("nav-link");
+    const menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+//.....................................
+
+
+//......find products searchBox.........
+    
+    const searchBox = document.getElementById("searchbox"); // Corrected variable name
+    const products = document.querySelectorAll(".product"); // Corrected variable name
+    
+    searchBox.addEventListener("keyup", function() { // Fixed event listener
+        const filterText = searchBox.value.toLowerCase(); 
+        
+        products.forEach(function(product) { 
+            const productName = product.textContent.toLowerCase(); // Get text content
+            
+            if (productName.includes(filterText)) { // Check if it matches
+                product.style.display = "block"; // Show matching products
+            } else {
+                product.style.display = "none"; // Hide non-matching products
+            }
+        });
+    });
+//.....................................
+
+
+    
+// pc viwe display searchbox2...........
+
+const srch = document.getElementById("searchbox2");
+
+function showseaechbox(){
+  if(srch.style.display === "none" || srch.style.display === ""){
+    srch.style.display="block";
+  }
+  else{
+    srch.style.display="none";
+  }
+}
+//......................................
+</script>
+
+</body>
+</html>
